@@ -1,0 +1,7 @@
+akshare
+langchain-core
+langgraph
+langgraph-checkpoint-sqlite
+pandas
+pydantic
+requests

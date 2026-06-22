@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tradingagents-cn"
+version = "0.1.0"
+description = "A 股版 TradingAgents 多智能体投研系统"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "zl" }
+]
+dependencies = [
+  "akshare",
+  "langchain-core",
+  "langgraph",
+  "langgraph-checkpoint-sqlite",
+  "pandas",
+  "pydantic",
+  "requests",
+]
+
+[project.scripts]
+tradingagents-cn = "run_user_question:main"
+tradingagents-cn-auto = "run_auto_paper_trader:main"
+
+[tool.setuptools]
+py-modules = ["run_user_question", "run_auto_paper_trader"]
+
+[tool.setuptools.packages.find]
+include = ["tradingagents_cn*"]
